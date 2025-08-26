@@ -335,9 +335,6 @@ class LLMAgent:
             return ResearchReport(
                 query=context.original_query,
                 executive_summary=(report_content
-                    #report_content[:500] + "..."
-                    #if len(report_content) > 500
-                    #else report_content
                 ),
                 detailed_findings=context.collected_data,
                 recommendations=analysis_data.get("recommendations", []),
