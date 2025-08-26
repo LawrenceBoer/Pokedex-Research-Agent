@@ -270,9 +270,6 @@ class LLMAgent:
             max_refinement_cycles = 2
             refinement_count = context.collected_data.get("refinement_count", 0)
             
-            #log the analysis data
-            logger.info(f"Analysis data: {analysis_data}")
-            
             if analysis_data.get("further_research_needed", False) and refinement_count < max_refinement_cycles:
                 refined_query = analysis_data.get("refined_query", context.original_query)
                 context.original_query = refined_query
