@@ -1,0 +1,15 @@
+services:
+  dev:
+    container_name: DeepResearchAgent-dev
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: tail -f /dev/null
+    volumes:
+      - type: bind
+        source: .
+        target: /srv
+        consistency: cached
+    env_file:
+      - .env
+    restart: always

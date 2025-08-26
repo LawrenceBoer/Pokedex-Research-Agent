@@ -1,0 +1,45 @@
+annotated-types==0.7.0
+    # via pydantic
+anyio==4.4.0
+    # via starlette
+click==8.1.7
+    # via uvicorn
+exceptiongroup==1.2.2
+    # via anyio
+fastapi==0.112.1
+gunicorn==23.0.0
+h11==0.14.0
+    # via uvicorn
+idna==3.7
+    # via anyio
+packaging==24.1
+    # via gunicorn
+pydantic==2.8.2
+    # via
+    #   fastapi
+    #   pydantic-settings
+pydantic-core==2.20.1
+    # via pydantic
+pydantic-settings==2.4.0
+python-dotenv==1.0.1
+    # via
+    #   pydantic-settings
+sniffio==1.3.1
+    # via anyio
+starlette==0.38.2
+    # via fastapi
+tenacity==9.0.0
+typing-extensions==4.12.2
+    # via
+    #   anyio
+    #   fastapi
+    #   pydantic
+    #   pydantic-core
+    #   starlette
+    #   uvicorn
+uvicorn==0.30.6
+typer==0.16.1
+openai==1.101.0
+requests==2.32.5
+aiohttp==3.12.15
+bs4==0.0.2
