@@ -46,7 +46,7 @@ def research(
         )
     )
 
-    asyncio.run(_conduct_research(query, compare, verbose))
+    asyncio.run(_conduct_research(query))
 
 
 @app.command()
@@ -74,7 +74,7 @@ def interactive():
 
             if query.strip():
                 console.print(f"\n[bold]🔬Researching:[/bold] {query}")
-                asyncio.run(_conduct_research(query, compare=False, verbose=False))
+                asyncio.run(_conduct_research(query))
 
         except KeyboardInterrupt:
             console.print("\n[yellow]Goodbye![/yellow]")
@@ -108,7 +108,7 @@ def demo():
         console.print("-" * 60)
 
         try:
-            asyncio.run(_conduct_research(query, compare=True, verbose=False))
+            asyncio.run(_conduct_research(query))
         except Exception as e:
             console.print(f"[red]Error in demo {i}: {e}[/red]")
 
@@ -117,7 +117,7 @@ def demo():
             input()
 
 
-async def _conduct_research(query: str, compare: bool = False, verbose: bool = False):
+async def _conduct_research(query: str):
     """Conduct research and display results."""
     reportPrinter = ReportPrinter()
 
