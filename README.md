@@ -75,7 +75,7 @@ pokemon_research_agent
 1. Clone the repository:
    ```
    git clone <repository-url>
-   cd convergence-interview-main
+   cd Pokedex-Research-Agent
    ```
 
 2. Install the required dependencies:
